@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { withAuth } from '../providers/AuthProvider';
 
-const PrivateRoute = ({ component: Component, isLogged, ...rest}) => {
+const ScanRoute = ({ component: Component, isLogged, ...rest}) => {
   return (
     <Route
       {...rest}
@@ -24,4 +24,4 @@ const PrivateRoute = ({ component: Component, isLogged, ...rest}) => {
   );
 }
 
-export default withAuth(PrivateRoute);
+export default withAuth(ScanRoute);

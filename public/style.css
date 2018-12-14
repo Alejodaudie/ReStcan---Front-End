@@ -38,11 +38,43 @@ html {
   
 
   div {
+    margin: 0;
+    padding: 0;
+  }
 
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background:#efefef;
+    grid-column-start: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5%;
+  }
+
+  .footer-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+    display: flex;
   }
 
   a {
     margin: 4%;
     display: flex;
     justify-content: center;
+  }
+
+  form {
+    margin: 25%
+  }
+
+  label{
+    
   }

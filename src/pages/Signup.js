@@ -34,14 +34,15 @@ class Signup extends Component {
   render() {
     const { username, password } = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
+      <div className='signup'>
+        <Link to={"/"}> <h1>ReStcan</h1></Link>
+      <form onSubmit={this.handleFormSubmit}>
           <label>Username:</label>
           <input type="text" name="username" value={username} onChange={this.handleChange}/>
           <label>Password:</label>
           <input type="password" name="password" value={password} onChange={this.handleChange} />
           <input type="submit" value="Signup" />
-        </form>
+      </form>
 
         <p>Already have account? 
           <Link to={"/login"}> Login</Link>
