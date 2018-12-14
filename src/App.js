@@ -14,8 +14,8 @@ class App extends Component {
     return (
       <AuthProvider>
         <div className="container">
-          <h1>Basic React Authentication</h1>
-          <Navbar />
+          {/* <Navbar /> */}
+          <h1>ReStcan</h1>
           <Switch>
               <Route exact path="/" component={Home} />
               <AnonRoute path="/signup" component={Signup} />
