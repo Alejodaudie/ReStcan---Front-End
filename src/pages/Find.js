@@ -7,8 +7,8 @@ class Find extends Component {
         return (
             <div>
                 <Navbar />
-                Fiiiiiiiiiiindddd
-                <FooterNav />
+                <h1 className="h1-files h1">Find</h1>
+                <FooterNav logout={this.props.logout}/>
             </div>
         );
     }

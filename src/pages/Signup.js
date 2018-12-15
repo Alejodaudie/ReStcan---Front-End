@@ -35,18 +35,16 @@ class Signup extends Component {
     const { username, password } = this.state;
     return (
       <div className='signup'>
-        <Link to={"/"}> <h1>ReStcan</h1></Link>
+        <Link className="a-tittle" to={"/"}><h1 className="h1-home-login-signup h1">ReStcan</h1></Link>
       <form onSubmit={this.handleFormSubmit}>
           <label>Username:</label>
-          <input type="text" name="username" value={username} onChange={this.handleChange}/>
+          <input className="box" type="text" name="username" value={username} onChange={this.handleChange}/>
           <label>Password:</label>
-          <input type="password" name="password" value={password} onChange={this.handleChange} />
-          <input type="submit" value="Signup" />
+          <input className="box" type="password" name="password" value={password} onChange={this.handleChange} />
+          <input className="button" type="submit" value="Signup" />
       </form>
 
-        <p>Already have account? 
-          <Link to={"/login"}> Login</Link>
-        </p>
+        <p className="p-account">Already have account? <Link to={"/login"}> Login</Link></p>
 
       </div>
     )

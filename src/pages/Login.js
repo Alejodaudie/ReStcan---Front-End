@@ -28,17 +28,18 @@ class Login extends Component {
     const { username, password } = this.state;
     return (
       <div className='login'>
-      <Link to={"/"}> <h1>ReStcan</h1></Link>
+      <Link className="a-tittle" to={"/"}><h1 className="h1-home-login-signup h1">ReStcan</h1></Link>
       <form onSubmit={this.handleFormSubmit}>
         <label>Username:</label>
-        <input type="text" name="username" value={username} onChange={this.handleChange}/>
+        <input className="box" type="text" name="username" value={username} onChange={this.handleChange}/>
         <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={this.handleChange} />
-        <input type="submit" value="Login" />
+        <input className="box" type="password" name="password" value={password} onChange={this.handleChange} />
+        <input className="button" type="submit" value="Login" />
       </form>
-        <p>You do not have account? 
-          <Link to={"/signup"}> Signup</Link>
-        </p>
+      <div>
+        <p className="p-account">You don't have an account?<Link to={"/signup"}> Signup</Link></p>
+      </div>
+        
       </div>
     )
   }

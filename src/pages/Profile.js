@@ -8,8 +8,8 @@ class Profile extends Component {
         return (
             <div>
                 <Navbar />
-                Profileeeeeee eiss
-                <FooterNav />
+                <h1 className="h1-files h1">Profile</h1>
+                <FooterNav logout={this.props.logout}/>
             </div>
         );
     }

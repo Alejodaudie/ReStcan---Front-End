@@ -12,9 +12,9 @@ class FooterNav extends Component {
                 <Link to='/restaurants'>Restaurants</Link>
                 <Link to='/find'>Find</Link>
                 <Link to='/scan'>Scan</Link>
-                <Link to='/menu'>Menu</Link>
+                {/*<Link to='/menu'>Menu</Link>*/}
                 <Link to='/profile'>Profile</Link>
-                <p onClick={this.props.logout}>Logout</p>
+                <p className="p-footernav" onClick={this.props.logout}>Logout</p>
             </div>
         );
     }

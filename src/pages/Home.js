@@ -11,7 +11,7 @@ class Home extends Component {
   }
 
   renderIsNotLoggedIn = () => {
-    return <div>
+    return <div className="div-home">
       <Link to='/login'>Login</Link>
       <Link to='/signup'>Signup</Link>
     </div>
@@ -19,8 +19,12 @@ class Home extends Component {
 
   render() {
     return (
-      <div className='home'>
-        <h1>ReStcan</h1>
+      <div className='div-home'>
+        <h1 className="h1-home-login-signup h1">ReStcan</h1>
+        <h2 className="h2-home">Scan it, eat it, enjoy it!</h2>
+        <p className="p-home">ReStcan is an app where through the scanning of a QR code located on the tablecloth of the restaurant, we 
+                              access directly to the menu of the restaurant, being able to request the order we want without the need of 
+                              waiters or long waits.</p>
         <img className='logo' src="/public/images/innovation.png" alt=""/>
         { this.props.isLogged ? this.renderIsLoggedIn() : this.renderIsNotLoggedIn() }
       </div>

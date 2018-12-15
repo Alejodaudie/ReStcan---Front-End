@@ -9,7 +9,7 @@ class Navbar extends Component {
     return (
         <div className="navbar div">
             <Link to='/scan'>Scan</Link>
-            <p>Hello {this.props.user.username}!</p>
+            <p className="p-navbar">Hello {this.props.user.username}!</p>
         </div>
     );
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import FooterNav from '../components/FooterNav';
 import Navbar from '../components/Navbar';
 
@@ -7,8 +8,9 @@ class Menu extends Component {
         return (
             <div>
                 <Navbar />
-                Menuuuuuu yeeeeeeps
-                <FooterNav />
+                <h1 className="h1-files h1">Menu</h1>
+                <Link to='/done'>Done</Link>
+                <FooterNav logout={this.props.logout}/>
             </div>
         );
     }
