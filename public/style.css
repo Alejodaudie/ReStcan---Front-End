@@ -123,7 +123,7 @@ html {
   }
 
   a {
-    margin: 2%;
+    margin: 0;
   }
 
   .a-tittle{
@@ -176,4 +176,24 @@ html {
     font-weight: bold;
     width: 35%;
     margin-top: 5%;
+  }
+
+  .icon-restaurant {
+    width: 50%;
+  }
+
+  .icon-find {
+    width: 50%;
+  }
+
+  .icon-scan {
+    width: 60%;
+  }
+
+  .icon-profile {
+    width: 50%;
+  }
+
+  .icon-logout {
+    width: 50%;
   }

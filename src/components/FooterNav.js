@@ -9,12 +9,12 @@ class FooterNav extends Component {
         return (
             <div className="footer-nav div">
                 
-                <Link to='/restaurants'>Restaurants</Link>
-                <Link to='/find'>Find</Link>
-                <Link to='/scan'>Scan</Link>
+                <Link to='/restaurants'><img className="icon-restaurant" src="/images/restaurant-1.png" alt=""/></Link>
+                <Link to='/find'><img className="icon-find" src="/images/find.png" alt="Find"/></Link>
+                <Link to='/scan'><img className="icon-scan" src="/images/scan.png" alt=""/></Link>
                 {/*<Link to='/menu'>Menu</Link>*/}
-                <Link to='/profile'>Profile</Link>
-                <p className="p-footernav" onClick={this.props.logout}>Logout</p>
+                <Link to='/profile'><img className="icon-profile" src="/images/profile.png" alt=""/></Link>
+                <p className="p-footernav" onClick={this.props.logout}><img className="icon-logout" src="/images/logout.png" alt=""/></p>
             </div>
         );
     }
