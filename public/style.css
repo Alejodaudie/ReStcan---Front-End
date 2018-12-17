@@ -35,10 +35,14 @@ html {
   }
 
   .h1-files {
-    padding-top: 13%;
+    padding-top: 18%;
   }
   
-  h2 {}
+  h2 {
+    font-size: 170%;
+    line-height: 116%;
+    padding-left: 8%;
+  }
   
   .h2-home {
     margin: 0;
@@ -47,6 +51,15 @@ html {
     padding-top: 2%;
     margin-bottom: 10%;
   }
+
+  .h2-files {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    margin-bottom: 10%;
+  }
+
 
   h3 {}
   
@@ -75,6 +88,7 @@ html {
   
   .p-navbar {
     margin: 0;
+ /* width: 28%; */
   }
 
   .p-footernav {
@@ -98,16 +112,27 @@ html {
     align-items: center;
   }
 
+  .div-done {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 20%;
+  }
+
   .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background:#efefef;
+    background:blue;
     grid-column-start: 3;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5%;
+    padding: 5.5%;
+  }
+
+  .logo {
+    width: 40%;
   }
 
   .footer-nav {
@@ -116,11 +141,35 @@ html {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1rem;
-    background-color: #efefef;
+    padding: 0%;
+    background-color: blue;
     text-align: center;
     display: flex;
+    align-items: center;
   }
+
+
+  .icon-restaurant {
+    width: 50%;
+  }
+
+  .icon-find {
+    width: 60%;
+  }
+
+  .icon-scan {
+    width: 85%;
+  }
+
+  .icon-profile {
+    width: 75%;
+  }
+
+  .icon-logout {
+    width: 50%;
+  }
+
+
 
   a {
     margin: 0;
@@ -178,22 +227,4 @@ html {
     margin-top: 5%;
   }
 
-  .icon-restaurant {
-    width: 50%;
-  }
-
-  .icon-find {
-    width: 50%;
-  }
-
-  .icon-scan {
-    width: 60%;
-  }
-
-  .icon-profile {
-    width: 50%;
-  }
-
-  .icon-logout {
-    width: 50%;
-  }
+  

@@ -14,6 +14,7 @@ import Menu from './pages/Menu';
 import Find from './pages/Find';
 import Restaurants from './pages/Restaurants';
 import Done from './pages/Done';
+import EditProfile from './pages/EditProfile';
 
 
 
@@ -33,6 +34,7 @@ class App extends Component {
               <Route path="/find" component={Find} />
               <Route path="/restaurants" component={Restaurants} />
               <Route path="/done" component={Done} />
+              <Route path="/edit-profile" component={EditProfile} />
           </Switch>
          
         </div>

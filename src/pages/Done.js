@@ -7,7 +7,12 @@ class Done extends Component {
         return (
             <div>
                 <Navbar />
-                <h1 className="h1-files h1">Done!</h1>
+                <div className="div-done">
+                    <h1 className="h1-files h1">Done!</h1>
+                    <input className="button" type="submit" value="+ food" />
+                    <input className="button" type="submit" value="Bill" />
+                </div>
+               
                 <FooterNav logout={this.props.logout}/>
             </div>
         );

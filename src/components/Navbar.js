@@ -8,7 +8,7 @@ class Navbar extends Component {
   render() {
     return (
         <div className="navbar div">
-            <Link to='/scan'>Scan</Link>
+            <Link to='/scan'><img className="logo" src="/images/logo.png" alt="Logo"/></Link>
             <p className="p-navbar">Hello {this.props.user.username}!</p>
         </div>
     );

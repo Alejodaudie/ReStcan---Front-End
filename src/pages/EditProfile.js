@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import FooterNav from '../components/FooterNav';
 import Navbar from '../components/Navbar';
 
-class Profile extends Component {
-   
+class EditProfile extends Component {
     render() {
         return (
             <div>
                 <Navbar />
-                <h1 className="h1-files h1">Profile</h1>
+                <h1 className="h1-files h1">Edit profile</h1>
                 <h2 className="h2-files h2">Personal Information</h2>
                  
                 <div>
@@ -27,13 +25,14 @@ class Profile extends Component {
                     <input type="password" name="password"/>
                 </div>
 
-                <Link to='/edit-profile'><input className="button" type="submit" value="Edit" /></Link>
+                <input className="button" type="submit" value="Accept" />
 
                 
                 <FooterNav logout={this.props.logout}/>
+    
             </div>
         );
     }
 }
 
-export default Profile;
+export default EditProfile;
