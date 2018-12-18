@@ -5,26 +5,78 @@ import Navbar from '../components/Navbar';
 import orderService from '../lib/order-service';
 import dish from '../components/Dish';
 import Dish from '../components/Dish';
+import OrderList from '../components/OrderList';
 
 class Menu extends Component {
 
     state = {
         dishes: [],
+        order: [],
         isLoading: true,
       }
 
     componentDidMount() {
-        orderService.listDishes()
-          .then((results) => {
-            this.setState({
-              dishes: results,
-              isLoading: false,
-            })
+      orderService.listDishes()
+        .then((results) => {
+          this.setState({
+            dishes: results,
+            isLoading: false,
           })
-      }
+        })
+    }
     
+    handleArrows = (description, value) => {
+      console.log('handleArrow')
+      const {dishes} = this.state;
+      const index = dishes.map(function(dish) { return dish.description; }).indexOf(description);
+      dishes[index].quantity = value;
+      this.setState({
+        dishes
+      })
+    }
+
+
+    handleAddToList = dish => {
+      dish = Object.assign({}, dish)
+      console.log('handleAdd')
+      if(dish.quantity > 0) {
+        let {order, dishes} = this.state;
+        this.resetDishQuantity(dishes, dish);
+        this.updateDishList(order, dish);
+        this.setState({
+          dishes,
+          order,
+        })
+      }
+    }
+
+    resetDishQuantity = (dishes, dish) => {
+      const index = dishes.map(function(dish) { return dish.description; }).indexOf(dish.description);
+      dishes[index].quantity = 0;
+    }
+
+    updateDishList = (order, dish) => {
+      const index = order.map(function(dish) { return dish.description; }).indexOf(dish.description);
+        if(index === -1) {
+          order.push(dish);
+        } else {
+          order[index].quantity += dish.quantity;
+        }
+      return order
+    }
+
+
+    handleDelete = index => {
+      let { order } = this.state;
+      order.splice(index,1)
+      this.setState({
+        order,
+      });
+    }
+
+
     render() {
-        const {dishes, isLoading} = this.state;
+        const {order, dishes, isLoading} = this.state;
         if (isLoading) {
             return <div>Loading.....</div>
         }
@@ -33,26 +85,68 @@ class Menu extends Component {
               
                 <Navbar />
                 <h1 className="h1-files h1">Menu</h1>
-                <h2 className="h2-menu">Entradas</h2>
+
+                  <div className="columns" id="columns">
+                  {/* <div>
+                   { this.renderList(dishes) }
+                  </div> */}
+                  <div>
+                  <OrderList order={order} 
+                            handleDelete={this.handleDelete} 
+                  />
+                  </div>
+                  </div>
+                
+                {this.state.order.map(dish => {
+                  return <p key={dish._id}>{dish.subcategory}</p>
+                })}
+               
+               <div className="div-subcategories">
+                 <h2 className="h2-menu">Entradas</h2>
                 {dishes.map((dish, index) => {
                   if (dish.subcategory === 'Entradas') {
-                    return <Dish category={dish.category} key={index} description={dish.description} quantity={dish.quantity} price={dish.price} id={dish._id}/>
+                    return <Dish 
+                            index={dish.description}  
+                            key={index} 
+                              dish={dish} 
+                              handleArrows={this.handleArrows}
+                              handleAddToList={this.handleAddToList}
+                            />
                   }
                 })}
+              </div> 
 
-                <h2 className="h2-menu">Primeros</h2>
+                <div className="div-subcategories">
+                  <h2 className="h2-menu">Primeros</h2>
                 {dishes.map((dish, index) => {
                   if (dish.subcategory === 'Primeros') {
-                    return <Dish category={dish.category} key={index} description={dish.description} quantity={dish.quantity} price={dish.price} id={dish._id}/>
+                    return <Dish 
+                            index={dish.description}
+                            key={index} 
+                            dish={dish} 
+                            handleArrows={this.handleArrows}
+                            handleAddToList={this.handleAddToList}
+                          />
                   }
                 })}
-
-                <h2 className="h2-menu">Segundos</h2>
+                </div>
+                
+                <div className="div-subcategories">
+                  <h2 className="h2-menu">Segundos</h2>
                 {dishes.map((dish, index) => {
                   if (dish.subcategory === 'Segundos') {
-                    return <Dish category={dish.category} key={index} description={dish.description} quantity={dish.quantity} price={dish.price} id={dish._id}/>
+                    return <Dish 
+                            index={dish.description}  
+                            key={index} 
+                              dish={dish} 
+                              handleArrows={this.handleArrows}
+                              handleAddToList={this.handleAddToList}      
+                            />
                   }  
                 })}
+                </div>
+                
+               
                 <Link to='/done'>Done</Link>
                 <FooterNav logout={this.props.logout}/>
             </div>

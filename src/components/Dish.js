@@ -1,40 +1,49 @@
 import React, { Component } from 'react';
-import orderService from '../lib/order-service';
+// import orderService from '../lib/order-service';
 
 class Dish extends Component {
 
-    state = {
-        quantity: this.props.quantity,
-        id: this.props.id,
-      }
+    // state = {
+    //     quantity: this.props.quantity,
+    //     id: this.props.id,
+    //   }
 
-      handleFormSubmit = (event) => {
-        event.preventDefault();
-        const { quantity, id } = this.state
+    //   handleFormSubmit = (event) => {
+    //     event.preventDefault();
+    //     const { quantity, id } = this.state
     
-        orderService.addDish({ quantity, id })
-        .then( (user) => { console.log('heyy')
-        })
-        .catch( error => console.log(error) )
-      }
+    //     orderService.addDish({ quantity, id })
+    //     .then( (user) => { console.log('heyy')
+    //     })
+    //     .catch( error => console.log(error) )
+    //   }
 
-    handleChange = (event) => {  
-    const {name, value} = event.target;
-    this.setState({[name]: value});
-    }
+    // handleChange = (event) => {  
+    // const {name, value} = event.target;
+    // this.setState({[name]: value});
+    // }
+
+
+    handleArrows = event => {
+      console.log('hey')
+        const {handleArrows, index} = this.props;
+        handleArrows(index, parseInt(event.target.value));
+      }
+    
+      handleAddToList = () => {
+        const {dish} = this.props;
+        this.props.handleAddToList(dish);
+      }
 
     render() {
-        const {quantity} = this.state
+        const {category, description, price, quantity} = this.props.dish;
         return (
-            <div>
-                <form className="form-dish">
-                    <input className="button-dish" type="submit" value="+" />
-                    <p className="p-dish-category">{this.props.category}</p>
-                    <p className="p-dish">{this.props.description}</p>
-                    <p className="p-dish">{this.props.price} €</p>
-                    <input className="input-dish" type="number" name="quantity" value={quantity} onChange={this.handleChange}/>
-                    
-                </form>
+            <div className="div-dish"> 
+              <p className="p-dish-category">{category}</p>
+              <p className="p-dish">{description}</p>
+              <p className="p-dish">{price} €</p>
+              <input className="input" type="number" placeholder="Alejo poner 0" value={quantity} min="0" onChange={this.handleArrows}/>
+              <button className="button is-info" onClick={this.handleAddToList}>+</button>
             </div>
         );
     }

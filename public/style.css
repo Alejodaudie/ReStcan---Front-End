@@ -133,6 +133,28 @@ html {
     padding-top: 20%;
   }
 
+
+  .div-order-list {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #EC734D;
+  }
+
+  .div-subcategories {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #EC734D;
+  }
+
+  .div-dish {
+    border-top-style: dotted;
+    border-color: #EC734D;
+  }
+
   .navbar {
     position: fixed;
     top: 0;
@@ -173,7 +195,7 @@ html {
     width: 50%;
   }
 
-  .icon-find {
+  .icon-search {
     width: 60%;
   }
 
@@ -189,7 +211,9 @@ html {
     width: 50%;
   }
 
-
+  .trash-icon {
+    width: 15%;
+}
 
   a {
     margin: 0;
