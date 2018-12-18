@@ -41,15 +41,14 @@ html {
   h2 {
     font-size: 170%;
     line-height: 116%;
-    padding-left: 8%;
+    /*padding-left: 8%; */
   }
   
   .h2-home {
     margin: 0;
-    width: 100%;
+    width: 93%;
     text-align: center;
-    padding-top: 2%;
-    margin-bottom: 10%;
+    padding-top: 6%;
   }
 
   .h2-files {
@@ -60,6 +59,12 @@ html {
     margin-bottom: 10%;
   }
 
+  .h2-menu {
+    margin: 0;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+  }
 
   h3 {}
   
@@ -72,11 +77,10 @@ html {
     margin: 0;
     width: 100%;
     text-align: justify;
-    font-size: 16px;
     margin-bottom: 14px;
-    padding: 10%;
-    border-radius: 10px;
-    border: 1px solid #343a40;
+    padding: 8%;
+  /* border-radius: 10px; */
+  /* border: 1px solid #343a40; */
   }
 
   .p-account {
@@ -88,13 +92,25 @@ html {
   
   .p-navbar {
     margin: 0;
- /* width: 28%; */
+ /* width: 55%; */
+    color: #F2F2F1;
   }
 
   .p-footernav {
     margin: 0;
   }
   
+  .p-dish {
+    margin: 0;
+    margin-top: 5%;
+  }
+
+  .p-dish-category {
+    margin: 0;
+    margin-top: 5%;
+    font-size: 80%;
+  }
+
   div {
     margin: 0;
     padding: 0;
@@ -106,10 +122,8 @@ html {
     text-align: center;
     margin-bottom: 14px;
     padding: 3%;
-    display: flex;
+  /* display: flex; */
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .div-done {
@@ -123,26 +137,32 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    background:blue;
+    background: #EC734D; /*  #ec7374;*/
     grid-column-start: 3;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5.5%;
+    border-radius: 4px;
+    /* border: 1px solid #F2F2F1;  /* #343a40; */
   }
 
+  .logo-home {
+    width: 80%;
+  }
+  
   .logo {
     width: 40%;
   }
 
   .footer-nav {
-    position: absolute;
+    position: fixed;
    /* position: fixed; ponerlo en vez del absolute (cuando el logout este bien situado)*/
     right: 0;
     bottom: 0;
     left: 0;
     padding: 0%;
-    background-color: blue;
+    background-color: #F2F2F1;
     text-align: center;
     display: flex;
     align-items: center;
@@ -190,6 +210,11 @@ html {
     padding: 3%;
   }
 
+  .form-dish {
+    border-radius: 10px;
+    border: 1px solid #EC734D;
+  }
+
   label{
     display: block;
     padding-top: 5%;
@@ -205,7 +230,11 @@ html {
     margin-bottom: 14px;
     padding: 3%;
     border-radius: 10px;
-    border: 1px solid #343a40;
+    border: 1px solid #EC734D;
+  }
+
+  .input-dish {
+    width: 13%;
   }
 
   .box {
@@ -217,7 +246,7 @@ html {
     padding: 7px 20px;
     text-align: center;
     font-size: 18px;
-    background-color: grey;
+    background-color: #EC734D;
     cursor: pointer;
     border-radius: 11px 11px 11px 11px;
     border: none;
@@ -227,4 +256,16 @@ html {
     margin-top: 5%;
   }
 
-  
+  .button-dish {
+    padding: 7px 20px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #EC734D;
+    cursor: pointer;
+    border-radius: 11px 11px 11px 11px;
+    border: none;
+    color: #f5f5f5;
+    font-weight: bold;
+    width: 13%;
+    margin-top: 5%;
+  }

@@ -28,7 +28,7 @@ class Login extends Component {
     const { username, password } = this.state;
     return (
       <div className='login'>
-      <Link className="a-tittle" to={"/"}><h1 className="h1-home-login-signup h1">ReStcan</h1></Link>
+      <Link className="a-tittle" to={"/"}><h1 className="h1-home-login-signup h1"><img className="logo-home" src="/images/logoHome.png" alt="logohome"/></h1></Link>
       <form onSubmit={this.handleFormSubmit}>
         <label>Username:</label>
         <input className="box" type="text" name="username" value={username} onChange={this.handleChange}/>
@@ -37,7 +37,7 @@ class Login extends Component {
         <input className="button" type="submit" value="Login" />
       </form>
       <div>
-        <p className="p-account">You don't have an account?<Link to={"/signup"}> Signup</Link></p>
+        <p className="p-account">You don't have an account?<Link to={"/signup"}> Sign up</Link></p>
       </div>
         
       </div>
