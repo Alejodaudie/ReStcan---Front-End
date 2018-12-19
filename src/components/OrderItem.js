@@ -13,7 +13,7 @@ handleDelete = () => {
             <div>
                 <li>{`${dish.quantity} ${dish.description} = ${dish.price * dish.quantity} €`}</li>
                 <div className="img-container">
-                <input type="image" src={process.env.PUBLIC_URL + "/images/trash.png"} alt="Trash icon" className="trash-icon" onClick={this.handleDelete}/>  
+                <input type="image" src={process.env.PUBLIC_URL + "/images/delete.png"} alt="Trash icon" className="input trash-icon" onClick={this.handleDelete}/>  
                 </div>
             </div>
         );

@@ -92,8 +92,9 @@ html {
   
   .p-navbar {
     margin: 0;
- /* width: 55%; */
+    width: 55%;
     color: #F2F2F1;
+    font-weight: bold;
   }
 
   .p-footernav {
@@ -135,16 +136,16 @@ html {
 
 
   .div-order-list {
-    margin: 0;
-    width: 100%;
+    width: 90%;
     text-align: center;
+    margin: 0 auto 20px;
     border-radius: 10px;
     border: 1px solid #EC734D;
   }
 
   .div-subcategories {
-    margin: 0;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto 20px;
     text-align: center;
     border-radius: 10px;
     border: 1px solid #EC734D;
@@ -258,7 +259,7 @@ html {
   }
 
   .input-dish {
-    width: 13%;
+    width: 25%;
   }
 
   .box {
@@ -292,4 +293,9 @@ html {
     font-weight: bold;
     width: 13%;
     margin-top: 5%;
+  }
+
+
+  .button-plus {
+    width: 14%;
   }

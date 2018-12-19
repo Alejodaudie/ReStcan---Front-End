@@ -17,6 +17,21 @@ class Order {
   addDish() {
     return this.order.post('/order/add')
     .then(response => response.data)
+  }
+
+  saveOrder(order) {
+    return this.order.post('/order/save', order)
+    .then(response => response.data)
+  }
+
+  getOrder(id) {
+    return this.order.get(`/order/${id}`)
+    .then(response => response.data)
+  }
+
+  listRestaurant() {
+    return this.order.get('/order/restaurant')
+    .then(response => response.data)
   } 
 
 

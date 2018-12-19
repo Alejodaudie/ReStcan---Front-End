@@ -61,7 +61,7 @@ class App extends Component {
               <Route path="/menu" component={Menu} />
               <Route path="/search" component={Search} />
               <Route path="/restaurants" component={Restaurants} />
-              <Route path="/done" component={Done} />
+              <Route path="/done/:id" component={Done} />
               <Route path="/edit-profile" component={EditProfile} />
           </Switch>
          

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import FooterNav from '../components/FooterNav';
 import Navbar from '../components/Navbar';
 import orderService from '../lib/order-service';
-import dish from '../components/Dish';
 import Dish from '../components/Dish';
 import OrderList from '../components/OrderList';
 
@@ -26,19 +25,17 @@ class Menu extends Component {
     }
     
     handleArrows = (description, value) => {
-      console.log('handleArrow')
       const {dishes} = this.state;
       const index = dishes.map(function(dish) { return dish.description; }).indexOf(description);
       dishes[index].quantity = value;
       this.setState({
-        dishes
+        dishes,
       })
     }
 
 
     handleAddToList = dish => {
       dish = Object.assign({}, dish)
-      console.log('handleAdd')
       if(dish.quantity > 0) {
         let {order, dishes} = this.state;
         this.resetDishQuantity(dishes, dish);
@@ -87,20 +84,13 @@ class Menu extends Component {
                 <h1 className="h1-files h1">Menu</h1>
 
                   <div className="columns" id="columns">
-                  {/* <div>
-                   { this.renderList(dishes) }
-                  </div> */}
+                
                   <div>
                   <OrderList order={order} 
                             handleDelete={this.handleDelete} 
                   />
                   </div>
                   </div>
-                
-                {this.state.order.map(dish => {
-                  return <p key={dish._id}>{dish.subcategory}</p>
-                })}
-               
                <div className="div-subcategories">
                  <h2 className="h2-menu">Entradas</h2>
                 {dishes.map((dish, index) => {
@@ -146,8 +136,6 @@ class Menu extends Component {
                 })}
                 </div>
                 
-               
-                <Link to='/done'>Done</Link>
                 <FooterNav logout={this.props.logout}/>
             </div>
         );
