@@ -15,6 +15,7 @@ class Profile extends Component {
                 <div>
                     <label>Profile picture</label>
                     <input type="image" name="Profile picture" />
+
                 </div>
                 
                 <div>
