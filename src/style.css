@@ -35,7 +35,7 @@ html {
   }
 
   .h1-files {
-    padding-top: 18%;
+    padding-top: 22%;
   }
   
   h2 {
@@ -62,6 +62,7 @@ html {
   .h2-menu {
     margin: 0;
     padding-top: 5%;
+    margin-bottom: 5%;
     display: flex;
     justify-content: center;
   }
@@ -92,7 +93,7 @@ html {
   
   .p-navbar {
     margin: 0;
-    width: 55%;
+    width: 60%;
     color: #F2F2F1;
     font-weight: bold;
   }
@@ -101,6 +102,10 @@ html {
     margin: 0;
   }
   
+  .p-restaurants {
+    margin: 15%;
+  }
+    
   .p-dish {
     margin: 0;
     margin-top: 5%;
@@ -110,6 +115,12 @@ html {
     margin: 0;
     margin-top: 5%;
     font-size: 80%;
+  }
+
+  .p-done {
+    margin: 0;
+    padding-top: 5%;
+    text-align: center;
   }
 
   div {
@@ -131,7 +142,11 @@ html {
     margin: 0;
     width: 100%;
     text-align: center;
-    padding-top: 20%;
+    padding-top: 15%;
+  }
+
+  .div-2done {
+    padding-top: 5%;
   }
 
 
@@ -154,6 +169,12 @@ html {
   .div-dish {
     border-top-style: dotted;
     border-color: #EC734D;
+  }
+
+  .div-bill-gates {
+    margin: 0;
+    width: 100%;
+    text-align: center;
   }
 
   .navbar {
@@ -260,6 +281,10 @@ html {
 
   .input-dish {
     width: 25%;
+  }
+
+  .input-search {
+    width: 90%;
   }
 
   .box {

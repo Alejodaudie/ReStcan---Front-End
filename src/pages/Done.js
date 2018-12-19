@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import FooterNav from '../components/FooterNav';
 import Navbar from '../components/Navbar';
 import orderService from '../lib/order-service';
@@ -40,16 +41,19 @@ class Done extends Component {
                 <Navbar />
                 <div className="div-done">
                     <h1 className="h1-files h1">Done!</h1>
-                    <input className="button" type="submit" value="+ food" />
-                    <input className="button" type="submit" value="Bill" />
+                    {/* <input className="button" type="submit" value="+ food" /> */}
+                    <Link to='/bill'><input className="button" type="submit" value="Bill" /></Link> 
                 </div>
-                <ul>
+                <div className="div-2done">
+                    <ul>
                     {order.map((dish, index) => {
                         console.log(dish)
                             return <li key={index}>{`${dish.qty} ${dish.dish.description} = ${dish.dish.price * dish.qty} €`}</li>
                     })}
-               </ul>
-               <p>{`Total: ${this.totalPrice(order)} €`}</p>
+                    </ul>
+                    <p className="p-done">{`Total: ${this.totalPrice(order)} €`}</p>
+                </div>
+                
                 <FooterNav logout={this.props.logout}/>
             </div>
         );

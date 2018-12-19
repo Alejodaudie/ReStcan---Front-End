@@ -15,6 +15,7 @@ import Search from './pages/Search';
 import Restaurants from './pages/Restaurants';
 import Done from './pages/Done';
 import EditProfile from './pages/EditProfile';
+import Bill from './pages/Bill';
 
 
 
@@ -63,6 +64,7 @@ class App extends Component {
               <Route path="/restaurants" component={Restaurants} />
               <Route path="/done/:id" component={Done} />
               <Route path="/edit-profile" component={EditProfile} />
+              <Route path="/bill" component={Bill} />
           </Switch>
          
         </div>
