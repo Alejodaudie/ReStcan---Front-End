@@ -7,6 +7,7 @@ class Home extends Component {
   renderIsLoggedIn = () => {
     return <div>
       <p>username: {this.props.user.username}</p>
+      <Link to='/scan'><input className="button" type="submit" value="Start" /></Link>
     </div>
   }
 

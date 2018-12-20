@@ -13,7 +13,6 @@ class Scan extends Component {
   }
 
 getUrl = (url) => {
-  console.log(url)
   if (url) {
     window.location.href = url;
   }
@@ -27,7 +26,7 @@ getUrl = (url) => {
       <div>
         <Navbar />
             <h1 className="h1-files h1">Scanner</h1>
-            <Link to='/menu'>Menu</Link>
+            <Link className="hidden-menu" to='/menu'>Menu</Link>
             <Qr getUrl={this.getUrl}/>
             <p>{this.state.url}</p>
         

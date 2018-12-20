@@ -52,7 +52,7 @@ class OrderList extends Component {
                             handleDelete={handleDelete}
                         />
                 })}
-                <p>{`Total: ${this.totalPrice(order)} €`}</p>
+                <p className="p-orderlist">{`Total: ${this.totalPrice(order)} €`}</p>
                 <input className="button" type="submit" value="Done" onClick={() => this.handleSubmitOrder(order)}/>
 
             </div>
