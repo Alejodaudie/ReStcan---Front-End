@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withAuth } from '../providers/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import FooterNav from '../components/FooterNav';
 import Navbar from '../components/Navbar';
 import Qr from '../components/QrReader';
@@ -9,18 +9,20 @@ class Scan extends Component {
 
   state = {
     url: "",
+    redirect: false
   }
 
 getUrl = (url) => {
-this.setState({
-  url,
-})
+  console.log(url)
+  if (url) {
+    window.location.href = url;
+  }
+
 }
 
 
   //function passmeinfo (url)
   render() {
-    
     return (
       <div>
         <Navbar />
@@ -35,4 +37,4 @@ this.setState({
   }
 }
 
-export default withAuth(Scan);
+export default withRouter(withAuth(Scan));

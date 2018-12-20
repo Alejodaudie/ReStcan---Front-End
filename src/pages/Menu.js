@@ -92,7 +92,7 @@ class Menu extends Component {
                   </div>
                   </div>
                <div className="div-subcategories">
-                 <h2 className="h2-menu">Entradas</h2>
+                 <h2 className="h2-menu">Appetizers</h2>
                 {dishes.map((dish, index) => {
                   if (dish.subcategory === 'Entradas') {
                     return <Dish 
@@ -107,7 +107,7 @@ class Menu extends Component {
               </div> 
 
                 <div className="div-subcategories">
-                  <h2 className="h2-menu">Primeros</h2>
+                  <h2 className="h2-menu">Starters</h2>
                 {dishes.map((dish, index) => {
                   if (dish.subcategory === 'Primeros') {
                     return <Dish 
@@ -122,7 +122,7 @@ class Menu extends Component {
                 </div>
                 
                 <div className="div-subcategories">
-                  <h2 className="h2-menu">Segundos</h2>
+                  <h2 className="h2-menu">Main Courses</h2>
                 {dishes.map((dish, index) => {
                   if (dish.subcategory === 'Segundos') {
                     return <Dish 

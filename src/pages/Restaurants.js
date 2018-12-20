@@ -30,9 +30,12 @@ class Restaurants extends Component {
                 <Navbar />
                 <h1 className="h1-files h1">Restaurants</h1>
                 {this.state.restaurants.map((restaurant) => {
-                   return <div key={restaurant._id}><p className="p-restaurants">{restaurant.name}</p>
-                                                    <p className="p-restaurants">{restaurant.address}</p>
-                                                    <p className="p-restaurants">{restaurant.imageUrl}</p></div>
+                   return <div className="div-restaurants-name" key={restaurant._id}><p className="p-restaurants-name">{restaurant.name}</p>
+                                                    <div className="div-restaurants-other">
+                                                        <p className="p-restaurants">{restaurant.address}</p>
+                                                        <img className="image-restaurant" src={restaurant.imageUrl} alt=""/>
+                                                    </div>
+                                                    </div>
                 })}
                 <FooterNav logout={this.props.logout}/>
             </div>

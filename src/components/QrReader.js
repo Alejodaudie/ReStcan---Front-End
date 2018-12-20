@@ -6,7 +6,7 @@ class Qr extends Component {
     super(props);
     this.state = {
       delay: 300,
-      result: "No result"
+      result: "Keep trying dude"
     };
     this.handleScan = this.handleScan.bind(this);
   }
@@ -30,7 +30,7 @@ class Qr extends Component {
           onScan={this.handleScan}
           style={{ width: "100%" }}
         />
-        <p>{this.state.result}</p>
+        <p className="p-scan">{this.state.result}</p>
       </div>
     );
   }

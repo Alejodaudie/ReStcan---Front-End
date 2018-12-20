@@ -35,7 +35,7 @@ html {
   }
 
   .h1-files {
-    padding-top: 22%;
+    padding-top: 20%;
   }
   
   h2 {
@@ -102,8 +102,25 @@ html {
     margin: 0;
   }
   
+  .p-restaurants-name {
+    font-weight: bold;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
   .p-restaurants {
-    margin: 15%;
+    margin: 0;
+    padding-top: 7%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .p-scan {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    font-family: monospace;
   }
     
   .p-dish {
@@ -126,6 +143,26 @@ html {
   div {
     margin: 0;
     padding: 0;
+  }
+
+  .div-profile{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .div-restaurants-name {
+    width: 90%;
+    margin: 0 auto 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #EC734D;
+    padding: 0 5%;
+  }
+
+  .div-restaurants-other {
+    border-top-style: dotted;
+    border-color: #EC734D;
   }
 
   .div-home {
@@ -156,6 +193,9 @@ html {
     margin: 0 auto 20px;
     border-radius: 10px;
     border: 1px solid #EC734D;
+    padding: 0 5%;
+    background: #EC734D;
+    opacity: 0.50;
   }
 
   .div-subcategories {
@@ -164,6 +204,7 @@ html {
     text-align: center;
     border-radius: 10px;
     border: 1px solid #EC734D;
+    padding: 0 5%;
   }
 
   .div-dish {
@@ -175,6 +216,7 @@ html {
     margin: 0;
     width: 100%;
     text-align: center;
+    position: fixed;
   }
 
   .navbar {
@@ -235,7 +277,14 @@ html {
 
   .trash-icon {
     width: 15%;
-}
+  }
+
+  .image-restaurant {
+    margin: 0;
+    padding-top: 7%;
+    text-align: center;
+    width: 100%;
+  }
 
   a {
     margin: 0;
